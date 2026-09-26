@@ -1,14 +1,26 @@
-﻿<!DOCTYPE html>
+﻿﻿<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="utf-8">
     <title>О себе</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        aside {
+            width: 300px;
+            background: var(--black);
+            padding-left: 200px;
+        }
+    </style>
 </head>
-<body bgcolor="black" text="#d4af37">
+<body>
     <header>
-        <h1>Битюков Дмитрий</h1>
-        <p>Любитель кино и сериалов</p>
-        <img src="images/avatar.png" alt="Аватар" width="75" height="75">
+        <div class="header-content">
+            <img src="images/avatar.png" alt="Аватар" width="150" height="150">
+            <div>
+                <h1 style="font-weight: 700;">Битюков Дмитрий</h1>
+                <p>Любитель кино и сериалов</p>
+            </div>
+        </div>
     </header>
     <main>
         <section>
@@ -21,14 +33,22 @@
             </ul>
         </section>
         <section>
-            <h2>Проекты, для которых я сделал бы фанатские трейлеры или написал свой сценарий:</h2>
-            <ol>
-                <li>Бесславные ублюдки</li>
-                <li>Пацаны</li>
-                <li>Лучше звоните Солу</li>
-            </ol>
+            <h2>Проекты:</h2>
+            <div class="projects">
+                <div class="project-card">
+                    <h3>Бесславные ублюдки</h3>
+                    <p>Альтернативный сценарий</p>
+                </div>
+                <div class="project-card">
+                    <h3>Пацаны</h3>
+                    <p>Фанатский трейлер</p>
+                </div>
+                <div class="project-card">
+                    <h3>Лучше звоните Солу</h3>
+                    <p>Альтернативный сценарий</p>
+                </div>
+            </div>
         </section>
-
     </main>
     <aside>
         <h2>Любимые жанры:</h2>
@@ -38,8 +58,8 @@
             <li>Триллер</li>
         </ul>
     </aside>
-    <h2>Форма обратной связи:</h2>
     <form>
+        <h2>Форма обратной связи:</h2>
         <p>
             <label for="username">Имя:</label><br>
             <input type="text" id="username" name="username" placeholder="Введите ваше имя">
@@ -57,7 +77,7 @@
         </p>
     </form>
     <footer>
-        <p>© 2026 Битюков Дмитрий</p>
+        <p>© 2026 Битюков Дмитрий <a href="https://example.ru">Связаться</a></p>
     </footer>
 </body>
 </html>
