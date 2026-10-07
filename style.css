@@ -8,6 +8,7 @@
     --red: #FF0000;
     --green: #1B4332;
     --orange: #E67E22;
+    --dark_gold: #b8962e;
 }
 body {
     background: var(--black);
@@ -27,17 +28,22 @@ header {
     border: 3px solid var(--green);
 }
 section {
-    padding-left: 200px;
-    padding-right: 200px;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 footer{
     text-align: right;
 }
 form {
-    padding-left: 200px;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 .header-content {
-    padding-left: 180px;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
     gap: 20px;
 }
@@ -71,7 +77,6 @@ form {
     font-weight: 700;
     font-size: 1.2em;
 }
-
 .project-card:hover h3 {
     font-size: 1.5em;
 }
@@ -83,6 +88,14 @@ input, button, textarea {
 input::placeholder, textarea::placeholder {
     color: var(--black);
 }
+input[type="button"]:hover{
+    background-color: var(--light_gray);
+}
+input[type="button"]:active {
+    background-color: var(--gold);
+    color: var(--black);
+    transform: scale(0.97);
+}
 input[type="button"]:focus{
     border-color: var(--red);
 }
@@ -93,11 +106,51 @@ a {
     color: var(--gold);
     text-decoration: none;
 }
+a:hover{
+    color: var(--dark_gold);
+}
+a:active {
+    color: var(--red);
+}
+a:focus{
+    outline: 2px solid var(--gold);
+}
 a:visited {
     color: var(--orange);
 }
-input[type="button"]:active {
-    background-color: var(--gold);
-    color: var(--black);
-    transform: scale(0.97);
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+@media (max-width: 768px) {
+    .projects {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    aside {
+        width: 100%;
+        max-width: 1200px;
+    }
+}
+@media (max-width: 480px) {
+    .projects {
+        grid-template-columns: 1fr;
+    }
+
+    section, form {
+        padding: 0 10px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
 }
